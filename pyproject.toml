@@ -1,0 +1,37 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "ninja",
+    "cmake>=3.12",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+files = "setup.py"
+strict = true
+show_error_codes = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = ["ninja"]
+ignore_missing_imports = true
+
+[project]
+name = "tbkpy"
+dynamic = ["version"]
+authors = [
+    {name = "MarkHtz", email = "feiwumark@gmail.com"},
+    {name = "Turing-zero Robotics", email = "turingzero.robot@gmail.com"},
+]
+description = "Turing-zero Bot Kits with Python"
+dependencies = [
+]
+keywords = ["robotics","ros","robocup","turing-zero"]
+
+[project.urls]
+Homepage = "https://github.com/Turing-zero/TBK"
+Documentation = "https://turing-zero-bot-kits.readthedocs.io/"
+Repository = "https://github.com/Turing-zero/TBK.git"
+Issues = "https://github.com/Turing-zero/TBK/issues"
