@@ -19,7 +19,7 @@ module = ["ninja"]
 ignore_missing_imports = true
 
 [project]
-name = "tbkpy"
+name = "tbkpy-core"
 dynamic = ["version"]
 authors = [
     {name = "MarkHtz", email = "feiwumark@gmail.com"},
@@ -28,10 +28,10 @@ authors = [
 description = "Turing-zero Bot Kits with Python"
 dependencies = [
 ]
-keywords = ["robotics","ros","robocup","turing-zero"]
+keywords = ["robotics","ros","robocup","turing-zero","tbk"]
 
 [project.urls]
-Homepage = "https://github.com/Turing-zero/TBK"
+Homepage = "https://github.com/Turing-zero/tbkpy-core"
 Documentation = "https://turing-zero-bot-kits.readthedocs.io/"
-Repository = "https://github.com/Turing-zero/TBK.git"
-Issues = "https://github.com/Turing-zero/TBK/issues"
+Repository = "https://github.com/Turing-zero/tbkpy-core.git"
+Issues = "https://github.com/Turing-zero/tbkpy-core/issues"
