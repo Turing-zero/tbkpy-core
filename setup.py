@@ -121,20 +121,7 @@ class CMakeBuild(build_ext):
             ["cmake", "--build", ".", *build_args], cwd=build_temp, check=True
         )
 
-def get_version():
-    # check with git for a valid version for setuptools
-    try:
-        version = (
-            subprocess.check_output(["git", "describe", "--tags"])
-            .strip()
-            .decode("utf-8")
-        )
-    except Exception:
-        version = "0.0.0"
-    return version
-
 setup(
-    version = get_version(),
     ext_modules=[CMakeExtension("tbkpy._core")],
     cmdclass={"build_ext": CMakeBuild},
 )
