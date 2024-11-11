@@ -49,6 +49,7 @@ PYBIND11_MODULE(_core, m) {
         .def("test", &SubscriberPy::test);
     py::class_<tbk::Publisher>(m, "Publisher")
         .def(py::init<const std::string&, const std::string&>(), py::arg("name"), py::arg("msg_name"))
+        .def(py::init<const tbk::EPInfo&>(), py::arg("ep_info"))
         .def("publish", py::overload_cast<const std::string &>(&tbk::Publisher::publish), py::arg("data"));
     m.def("add", &add, "A function which adds two numbers");
 }
